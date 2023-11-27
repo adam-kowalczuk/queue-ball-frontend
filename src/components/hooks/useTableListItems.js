@@ -11,7 +11,7 @@ const useTableListItem = function (props) {
       setPlayers(response.data.players);
     });
 
-    const socket = io("wss://queue-ball-backend-production.up.railway.app");
+    const socket = io("https://cosmic-khapse-1d3ddf.netlify.app");
     setSocket(socket);
 
     socket.on("connect", () => {
