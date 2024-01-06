@@ -3,7 +3,7 @@ import useTableListItem from "./hooks/useTableListItems";
 import QueueListItem from "./Table/QueueListItem";
 import Button from "./Button";
 
-const TableListItem = function(props) {
+const TableListItem = function (props) {
   const { players, joinQueue, leaveQueue, isTableIdNull, playerTableNumber } =
     useTableListItem(props);
 
@@ -55,7 +55,7 @@ const TableListItem = function(props) {
     "player-count-six": props.playerCount === "6" && props.status,
     "player-count-seven": props.playerCount === "7" && props.status,
     "player-count-eight": props.playerCount === "8" && props.status,
-    "default-color": props.playerCount > "8" && props.status 
+    "default-color": props.playerCount > "8" && props.status
   });
 
   return (
@@ -87,7 +87,9 @@ const TableListItem = function(props) {
           ) : (
             <div>
               {props.id !== playerTableNumber && (
-                <h1 className="current-table-enqueued">You are currently at Table {playerTableNumber}</h1>
+                <h1 className="current-table-enqueued">
+                  You are currently at Table {playerTableNumber}
+                </h1>
               )}
               {props.id === playerTableNumber && ( // check the table id and only render leave the queue button for that table
                 <Button
